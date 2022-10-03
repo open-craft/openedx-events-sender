@@ -1,5 +1,7 @@
 # Core requirements for using this application
 -c constraints.txt
 
+openedx-events
 Django             # Web application framework
-
+celery
+requests

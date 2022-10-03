@@ -105,14 +105,18 @@ setup(
     version=VERSION,
     description="""Send Open edX events to selected URLs.""",
     long_description=README + '\n\n' + CHANGELOG,
-    author='edX',
-    author_email='oscm@edx.org',
-    url='https://github.com/openedx/openedx-events-sender',
+    author='OpenCraft',
+    author_email='help@opencraft.com',
+    url='https://github.com/open-craft/openedx-events-sender',
     packages=find_packages(
         include=['openedx_events_sender', 'openedx_events_sender.*'],
         exclude=["*tests"],
     ),
-
+    entry_points={
+        'lms.djangoapp': [
+            'openedx-events-sender = openedx_events_sender.apps:OpenedxEventsSenderConfig',
+        ]
+    },
     include_package_data=True,
     install_requires=load_requirements('requirements/base.in'),
     python_requires=">=3.8",

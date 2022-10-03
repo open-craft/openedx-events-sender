@@ -1,13 +1,6 @@
 openedx-events-sender
 #############################
 
-.. note::
-
-  This README was auto-generated. Maintainer: please review its contents and
-  update all relevant sections. Instructions to you are marked with
-  "PLACEHOLDER" or "TODO". Update or remove those sections, and remove this
-  note when you are done.
-
 |pypi-badge| |ci-badge| |codecov-badge| |doc-badge| |pyversions-badge|
 |license-badge| |status-badge|
 
@@ -15,12 +8,6 @@ Purpose
 *******
 
 Send Open edX events to selected URLs.
-
-TODO: The ``README.rst`` file should start with a brief description of the repository and its purpose.
-It should be described in the context of other repositories under the ``openedx``
-organization. It should make clear where this fits in to the overall Open edX
-codebase and should be oriented towards people who are new to the Open edX
-project.
 
 Getting Started
 ***************
@@ -33,7 +20,7 @@ One Time Setup
 .. code-block::
 
   # Clone the repository
-  git clone git@github.com:openedx/openedx-events-sender.git
+  git clone git@github.com:open-craft/openedx-events-sender.git
   cd openedx-events-sender
 
   # Set up a virtualenv using virtualenvwrapper with the same name as the repo and activate it
@@ -78,27 +65,58 @@ Every time you develop something in this repo
 Deploying
 =========
 
-TODO: How can a new user go about deploying this component? Is it just a few
-commands? Is there a larger how-to that should be linked here?
-
-PLACEHOLDER: For details on how to deploy this component, see the `deployment how-to`_
-
-.. _deployment how-to: https://docs.openedx.org/projects/openedx-events-sender/how-tos/how-to-deploy-this-component.html
-
-Getting Help
-************
+To deploy this to an Open edX instance, include it in the ``EDXAPP_PRIVATE_REQUIREMENTS`` variables.
 
 Documentation
-=============
+*************
 
-PLACEHOLDER: Start by going through `the documentation`_.  If you need more help see below.
+Events
+======
 
-.. _the documentation: https://docs.openedx.org/projects/openedx-events-sender
+COURSE_ENROLLMENT_CHANGED
+-------------------------
 
-(TODO: `Set up documentation <https://openedx.atlassian.net/wiki/spaces/DOC/pages/21627535/Publish+Documentation+on+Read+the+Docs>`_)
+Example data
+^^^^^^^^^^^^
 
-More Help
-=========
+.. code-block:: json
+
+   {
+    "user_id": 42,
+    "user_is_active": true,
+    "user_pii_username": "test",
+    "user_pii_email": "test@example.com",
+    "user_pii_name": "test",
+    "course_course_key": "course-v1:edX+DemoX+Demo_Course",
+    "course_display_name": "Demonstration Course",
+    "course_start": "2022-09-30 00:00:00",
+    "course_end": null,
+    "mode": "audit",
+    "is_active": true,
+    "enrollment_creation_date": "2022-09-30 12:34:56",
+    "enrollment_created_by": null
+   }
+
+Configuration
+^^^^^^^^^^^^^
+
+To send this event, you need to set ``EVENT_SENDER_ENROLLMENT_URL`` in your settings.
+
+You can pass custom headers by setting ``EVENT_SENDER_ENROLLMENT_HEADERS``.
+
+You can define custom field mapping with ``EVENT_SENDER_ENROLLMENT_FIELD_MAPPING``.
+E.g. If you would like to send ``email`` instead of ``user_pii_email``, set this to the following value:
+
+.. code-block:: json
+
+   {
+    "user_pii_email": "email"
+   }
+
+**Note**: if you want to use custom mapping, you need to define **all** values that will be sent. If you define an empty field mapping, then an empty dict will be sent in the request.
+
+Getting Help
+============
 
 If you're having trouble, we have discussion forums at
 https://discuss.openedx.org where you can connect with others in the
@@ -111,7 +129,7 @@ For anything non-trivial, the best path is to open an issue in this
 repository with as many details about the issue you are facing as you
 can provide.
 
-https://github.com/openedx/openedx-events-sender/issues
+https://github.com/open-craft/openedx-events-sender/issues
 
 For more information about these options, see the `Getting Help`_ page.
 
@@ -165,12 +183,12 @@ Please do not report security issues in public. Please email security@tcril.org.
     :target: https://pypi.python.org/pypi/openedx-events-sender/
     :alt: PyPI
 
-.. |ci-badge| image:: https://github.com/openedx/openedx-events-sender/workflows/Python%20CI/badge.svg?branch=main
-    :target: https://github.com/openedx/openedx-events-sender/actions
+.. |ci-badge| image:: https://github.com/open-craft/openedx-events-sender/workflows/Python%20CI/badge.svg?branch=main
+    :target: https://github.com/open-craft/openedx-events-sender/actions
     :alt: CI
 
-.. |codecov-badge| image:: https://codecov.io/github/openedx/openedx-events-sender/coverage.svg?branch=main
-    :target: https://codecov.io/github/openedx/openedx-events-sender?branch=main
+.. |codecov-badge| image:: https://codecov.io/github/open-craft/openedx-events-sender/coverage.svg?branch=main
+    :target: https://codecov.io/github/open-craft/openedx-events-sender?branch=main
     :alt: Codecov
 
 .. |doc-badge| image:: https://readthedocs.org/projects/openedx-events-sender/badge/?version=latest
@@ -181,12 +199,8 @@ Please do not report security issues in public. Please email security@tcril.org.
     :target: https://pypi.python.org/pypi/openedx-events-sender/
     :alt: Supported Python versions
 
-.. |license-badge| image:: https://img.shields.io/github/license/openedx/openedx-events-sender.svg
-    :target: https://github.com/openedx/openedx-events-sender/blob/main/LICENSE.txt
+.. |license-badge| image:: https://img.shields.io/github/license/open-craft/openedx-events-sender.svg
+    :target: https://github.com/open-craft/openedx-events-sender/blob/main/LICENSE.txt
     :alt: License
 
-.. TODO: Choose one of the statuses below and remove the other status-badge lines.
-.. |status-badge| image:: https://img.shields.io/badge/Status-Experimental-yellow
-.. .. |status-badge| image:: https://img.shields.io/badge/Status-Maintained-brightgreen
-.. .. |status-badge| image:: https://img.shields.io/badge/Status-Deprecated-orange
-.. .. |status-badge| image:: https://img.shields.io/badge/Status-Unsupported-red
+.. |status-badge| image:: https://img.shields.io/badge/Status-Maintained-brightgreen

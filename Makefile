@@ -1,6 +1,4 @@
-.PHONY: clean compile_translations coverage diff_cover docs dummy_translations \
-        extract_translations fake_translations help pii_check pull_translations push_translations \
-        quality requirements selfcheck test test-all upgrade validate install_transifex_client
+.PHONY: clean coverage diff_cover help pii_check quality requirements selfcheck test test-all upgrade validate
 
 .DEFAULT_GOAL := help
 
@@ -25,10 +23,6 @@ coverage: clean ## generate and view HTML coverage report
 	pytest --cov-report html
 	$(BROWSER)htmlcov/index.html
 
-docs: ## generate Sphinx HTML documentation, including API docs
-	tox -e docs
-	$(BROWSER)docs/_build/html/index.html
-
 # Define PIP_COMPILE_OPTS=-v to get more information during make upgrade.
 PIP_COMPILE = pip-compile --upgrade $(PIP_COMPILE_OPTS)
 
@@ -42,12 +36,11 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	pip install -qr requirements/pip-tools.txt
 	$(PIP_COMPILE) -o requirements/base.txt requirements/base.in
 	$(PIP_COMPILE) -o requirements/test.txt requirements/test.in
-	$(PIP_COMPILE) -o requirements/doc.txt requirements/doc.in
 	$(PIP_COMPILE) -o requirements/quality.txt requirements/quality.in
 	$(PIP_COMPILE) -o requirements/ci.txt requirements/ci.in
 	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in
-	# Let tox control the Django version for tests
-	sed '/^[dD]jango==/d' requirements/test.txt > requirements/test.tmp
+	# Let tox control the Django and openedx-events version for tests
+	sed '/^[dD]jango==/d; /^openedx-events==/d' requirements/test.txt > requirements/test.tmp
 	mv requirements/test.tmp requirements/test.txt
 
 quality: ## check coding style with pycodestyle and pylint
@@ -71,42 +64,8 @@ diff_cover: test ## find diff lines that need test coverage
 
 test-all: quality pii_check ## run tests on every supported Python/Django combination
 	tox
-	tox -e docs
 
 validate: quality pii_check test ## run tests and quality checks
 
 selfcheck: ## check that the Makefile is well-formed
 	@echo "The Makefile is well-formed."
-
-## Localization targets
-
-extract_translations: ## extract strings to be translated, outputting .mo files
-	rm -rf docs/_build
-	cd openedx_events_sender && ../manage.py makemessages -l en -v1 -d django
-	cd openedx_events_sender && ../manage.py makemessages -l en -v1 -d djangojs
-
-compile_translations: ## compile translation files, outputting .po files for each supported language
-	cd openedx_events_sender && ../manage.py compilemessages
-
-detect_changed_source_translations:
-	cd openedx_events_sender && i18n_tool changed
-
-pull_translations: ## pull translations from Transifex
-	tx pull -af --mode reviewed
-
-push_translations: ## push source translation files (.po) from Transifex
-	tx push -s
-
-dummy_translations: ## generate dummy translation (.po) files
-	cd openedx_events_sender && i18n_tool dummy
-
-build_dummy_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
-
-validate_translations: build_dummy_translations detect_changed_source_translations ## validate translations
-
-install_transifex_client: ## Install the Transifex client
-	# Instaling client will skip CHANGELOG and LICENSE files from git changes
-	# so remind the user to commit the change first before installing client.
-	git diff -s --exit-code HEAD || { echo "Please commit changes first."; exit 1; }
-	curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
-	git checkout -- LICENSE README.md ## overwritten by Transifex installer
