@@ -134,7 +134,7 @@ def test_send_data(request_mock: MagicMock, settings, data: EventTestData):
 @patch("openedx_events_sender.tasks.requests")
 def test_send_headers(request_mock: MagicMock, settings, data: EventTestData):
     """Defined headers should be included in the request."""
-    headers = {"TEST_HEADER": "TEST_VALUE"}
+    headers = {"Authorization": "JWT key"}
     _set_url(settings, data)
     _set_headers(settings, data, headers)
     _send_enrollment_event(data)
