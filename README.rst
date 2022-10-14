@@ -65,7 +65,43 @@ Every time you develop something in this repo
 Deploying
 =========
 
-To deploy this to an Open edX instance, include it in the ``EDXAPP_PRIVATE_REQUIREMENTS`` variables.
+Native Installation
+-------------------
+
+To deploy this to an Open edX instance, include it in the ``EDXAPP_PRIVATE_REQUIREMENTS`` or ``EDXAPP_EXTRA_REQUIREMENTS`` variables.
+
+Include the require configuration settings in ``EDXAPP_LMS_ENV_EXTRA`` variable.
+
+
+
+Tutor Installation
+------------------
+
+To `install`_ this in the Open edX build, include it in the ``config.yml`` file using the ``OPENEDX_EXTRA_PIP_REQUIREMENTS`` variable.
+
+You need to rebuild the Open edX image::
+
+    tutor images build openedx
+
+
+Add the required configuration settings using a `yaml tutor plugin`_::
+
+  name: events_sender_plugin
+  version: 0.1.0
+  patches:
+    lms-env: |
+        EVENT_SENDER_ENROLLMENT_URL: "https://webhook.site/xyz"
+        EVENT_SENDER_ENROLLMENT_HEADERS: {"Authorization": "TEST DATA"}
+        EVENT_SENDER_ENROLLMENT_FIELD_MAPPING: {
+            "user_pii_email": "email",
+            "course_course_key": "course_id",
+            "is_active": "is_active"
+        }
+
+
+.. _install: https://docs.tutor.overhang.io/configuration.html?highlight=xblock#installing-extra-xblocks-and-requirements
+.. _yaml tutor plugin: https://docs.tutor.overhang.io/plugins/v0/gettingstarted.html#yaml-file
+
 
 Documentation
 *************
