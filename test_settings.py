@@ -5,8 +5,6 @@ In a real-world use case, apps in this project are installed into other
 Django applications, so these settings will not be used.
 """
 
-INSTALLED_APPS = (
-    'openedx_events_sender',
-)
+INSTALLED_APPS = ('openedx_events_sender',)
 
 TESTING = True
