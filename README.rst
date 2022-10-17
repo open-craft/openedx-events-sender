@@ -84,7 +84,9 @@ You need to rebuild the Open edX image::
     tutor images build openedx
 
 
-Add the required configuration settings using a `yaml tutor plugin`_::
+Add the required configuration settings using a `yaml tutor plugin`_:
+
+.. code-block:: yaml
 
   name: events_sender_plugin
   version: 0.1.0
@@ -112,7 +114,7 @@ Events
 COURSE_ENROLLMENT_CHANGED
 -------------------------
 
-Example data
+Example payload
 ^^^^^^^^^^^^
 
 .. code-block:: json
