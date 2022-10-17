@@ -120,19 +120,20 @@ Example payload
 .. code-block:: json
 
    {
+    "event": "org.openedx.learning.course.enrollment.changed.v1",
     "user_id": 42,
     "user_is_active": true,
     "user_pii_username": "test",
     "user_pii_email": "test@example.com",
-    "user_pii_name": "test",
+    "user_pii_name": "Test Name",
     "course_course_key": "course-v1:edX+DemoX+Demo_Course",
     "course_display_name": "Demonstration Course",
     "course_start": "2022-09-30 00:00:00",
     "course_end": null,
     "mode": "audit",
     "is_active": true,
-    "enrollment_creation_date": "2022-09-30 12:34:56",
-    "enrollment_created_by": null
+    "creation_date": "2022-09-30 12:34:56",
+    "created_by": null
    }
 
 Configuration
@@ -151,7 +152,13 @@ E.g. If you would like to send ``email`` instead of ``user_pii_email``, set this
     "user_pii_email": "email"
    }
 
+You can also define event-specific metadata by prefixing variables from
+`EventMetadata`_ with ``metadata_``. E.g. to get the event's name, you should
+specify ``metadata_event_type`` as a key in the mapping.
+
 **Note**: if you want to use custom mapping, you need to define **all** values that will be sent. If you define an empty field mapping, then an empty dict will be sent in the request.
+
+.. _EventMetadata: https://openedx-events.readthedocs.io/en/latest/openedx_events.html#openedx_events.data.EventsMetadata
 
 Getting Help
 ============

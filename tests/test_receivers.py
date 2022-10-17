@@ -5,6 +5,7 @@ If you want to test more receivers, add new entries to `pytestmark`.
 """
 
 import datetime
+import logging
 from dataclasses import dataclass
 from typing import Any, Callable, Dict, Optional, Union
 from unittest.mock import MagicMock, patch
@@ -61,6 +62,7 @@ pytestmark = pytest.mark.parametrize(
                 ),
             },
             parsed_data={
+                "event": "org.openedx.learning.course.enrollment.changed.v1",
                 "user_id": 42,
                 "user_is_active": True,
                 "user_pii_username": "test",
@@ -76,11 +78,13 @@ pytestmark = pytest.mark.parametrize(
                 "created_by": None,
             },
             field_mapping={
+                "metadata_event_type": "event",
                 "user_pii_email": "email",
                 "course_course_key": "course_id",
                 "is_active": "is_active",
             },
             filtered_data={
+                "event": "org.openedx.learning.course.enrollment.changed.v1",
                 "email": "test@example.com",
                 "course_id": "course-v1:edX+DemoX+Demo_Course",
                 "is_active": True,
@@ -115,10 +119,14 @@ def _set_field_mapping(settings, data, field_mapping: Dict[str, str]):
 
 
 @patch("openedx_events_sender.receivers._send_data")
-def test_send_data_without_url(send_data_mock: MagicMock, data: EventTestData):
+def test_send_data_without_url(send_data_mock: MagicMock, caplog, data: EventTestData):
     """Sending data is optional - we only send a request if a target URL is defined."""
+    caplog.set_level(logging.INFO)
+
     _send_enrollment_event(data)
     send_data_mock.assert_not_called()
+
+    assert f"EVENT_SENDER_{data.event}_URL is not set." in caplog.text
 
 
 @patch("openedx_events_sender.tasks.requests")
