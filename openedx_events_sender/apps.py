@@ -10,7 +10,7 @@ class OpenedxEventsSenderConfig(AppConfig):
     Configuration for the openedx_events_sender Django application.
     """
 
-    name = 'openedx_events_sender'
+    name = "openedx_events_sender"
 
     plugin_app = {
         "signals_config": {

@@ -9,7 +9,7 @@ from django.conf import settings
 
 def get_celery_app():
     """Get Celery app to reuse configuration and queues."""
-    if getattr(settings, 'TESTING', False):
+    if getattr(settings, "TESTING", False):
         # We can ignore this in the testing environment.
         return Celery(task_always_eager=True)
 
