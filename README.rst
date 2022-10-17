@@ -1,5 +1,5 @@
 openedx-events-sender
-#############################
+#####################
 
 |pypi-badge| |ci-badge| |codecov-badge| |doc-badge| |pyversions-badge|
 |license-badge| |status-badge|
@@ -115,7 +115,7 @@ COURSE_ENROLLMENT_CHANGED
 -------------------------
 
 Example payload
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 .. code-block:: json
 
