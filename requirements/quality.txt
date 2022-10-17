@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.12.10
+astroid==2.12.11
     # via
     #   pylint
     #   pylint-celery
@@ -69,7 +69,7 @@ coverage[toml]==6.5.0
     #   pytest-cov
 dill==0.3.5.1
     # via pylint
-django==3.2.15
+django==3.2.16
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -77,6 +77,10 @@ django==3.2.15
 edx-lint==5.3.0
     # via -r requirements/quality.in
 edx-opaque-keys[django]==2.3.0
+    # via
+    #   -r requirements/test.txt
+    #   openedx-events
+fastavro==1.6.1
     # via
     #   -r requirements/test.txt
     #   openedx-events
@@ -108,10 +112,8 @@ markupsafe==2.1.1
     #   jinja2
 mccabe==0.7.0
     # via pylint
-openedx-events==0.6.0
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/test.txt
+openedx-events==1.0.0
+    # via -r requirements/test.txt
 packaging==21.3
     # via
     #   -r requirements/test.txt
@@ -138,7 +140,7 @@ pycodestyle==2.9.1
     # via -r requirements/quality.in
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.15.3
+pylint==2.15.4
     # via
     #   edx-lint
     #   pylint-celery
@@ -195,7 +197,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==4.0.0
+stevedore==4.0.1
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -212,7 +214,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.11.5
     # via pylint
-typing-extensions==4.3.0
+typing-extensions==4.4.0
     # via
     #   astroid
     #   pylint

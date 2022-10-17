@@ -63,6 +63,10 @@ edx-opaque-keys[django]==2.3.0
     # via
     #   -r requirements/base.txt
     #   openedx-events
+fastavro==1.6.1
+    # via
+    #   -r requirements/base.txt
+    #   openedx-events
 idna==3.4
     # via
     #   -r requirements/base.txt
@@ -77,9 +81,7 @@ kombu==5.2.4
     #   celery
 markupsafe==2.1.1
     # via jinja2
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/base.txt
+    # via -r requirements/base.txt
 packaging==21.3
     # via pytest
 pbr==5.10.0
@@ -127,7 +129,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==4.0.0
+stevedore==4.0.1
     # via
     #   -r requirements/base.txt
     #   code-annotations
