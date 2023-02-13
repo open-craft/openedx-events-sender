@@ -61,7 +61,7 @@ six==1.16.0
     # via click-repl
 sqlparse==0.4.3
     # via django
-stevedore==4.1.1
+stevedore==5.0.0
     # via edx-opaque-keys
 urllib3==1.26.14
     # via requests

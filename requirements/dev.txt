@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.14.1
+astroid==2.14.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -173,7 +173,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.12.2
     # via -r requirements/pip-tools.txt
-platformdirs==2.6.2
+platformdirs==3.0.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -273,7 +273,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/quality.txt
     #   django
-stevedore==4.1.1
+stevedore==5.0.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -320,7 +320,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.17.1
+virtualenv==20.19.0
     # via
     #   -r requirements/ci.txt
     #   tox
