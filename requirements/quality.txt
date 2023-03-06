@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.14.2
+astroid==2.15.0
     # via
     #   pylint
     #   pylint-celery
@@ -116,7 +116,7 @@ markupsafe==2.1.2
     #   jinja2
 mccabe==0.7.0
     # via pylint
-openedx-events==5.1.0
+openedx-events==6.0.0
     # via -r requirements/test.txt
 packaging==23.0
     # via
@@ -126,13 +126,13 @@ pbr==5.11.1
     # via
     #   -r requirements/test.txt
     #   stevedore
-platformdirs==3.0.0
+platformdirs==3.1.0
     # via pylint
 pluggy==1.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
-prompt-toolkit==3.0.37
+prompt-toolkit==3.0.38
     # via
     #   -r requirements/test.txt
     #   click-repl
@@ -140,7 +140,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==2.16.2
+pylint==2.16.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -158,7 +158,7 @@ pymongo==3.13.0
     # via
     #   -r requirements/test.txt
     #   edx-opaque-keys
-pytest==7.2.1
+pytest==7.2.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov

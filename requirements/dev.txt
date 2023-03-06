@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.14.2
+astroid==2.15.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -155,7 +155,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-openedx-events==5.1.0
+openedx-events==6.0.0
     # via -r requirements/quality.txt
 packaging==23.0
     # via
@@ -171,9 +171,9 @@ pbr==5.11.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==6.12.2
+pip-tools==6.12.3
     # via -r requirements/pip-tools.txt
-platformdirs==3.0.0
+platformdirs==3.1.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -188,7 +188,7 @@ pluggy==1.0.0
     #   tox
 polib==1.2.0
     # via edx-i18n-tools
-prompt-toolkit==3.0.37
+prompt-toolkit==3.0.38
     # via
     #   -r requirements/quality.txt
     #   click-repl
@@ -202,7 +202,7 @@ pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.14.0
     # via diff-cover
-pylint==2.16.2
+pylint==2.16.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -230,7 +230,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.2.1
+pytest==7.2.2
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -320,7 +320,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.19.0
+virtualenv==20.20.0
     # via
     #   -r requirements/ci.txt
     #   tox
