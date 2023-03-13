@@ -31,7 +31,7 @@ certifi==2022.12.7
     # via
     #   -r requirements/test.txt
     #   requests
-charset-normalizer==3.0.1
+charset-normalizer==3.1.0
     # via
     #   -r requirements/test.txt
     #   requests
@@ -80,11 +80,11 @@ edx-opaque-keys[django]==2.3.0
     # via
     #   -r requirements/test.txt
     #   openedx-events
-exceptiongroup==1.1.0
+exceptiongroup==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-fastavro==1.7.2
+fastavro==1.7.3
     # via
     #   -r requirements/test.txt
     #   openedx-events
@@ -116,7 +116,7 @@ markupsafe==2.1.2
     #   jinja2
 mccabe==0.7.0
     # via pylint
-openedx-events==6.0.0
+openedx-events==7.0.0
     # via -r requirements/test.txt
 packaging==23.0
     # via
@@ -126,7 +126,7 @@ pbr==5.11.1
     # via
     #   -r requirements/test.txt
     #   stevedore
-platformdirs==3.1.0
+platformdirs==3.1.1
     # via pylint
 pluggy==1.0.0
     # via
@@ -140,7 +140,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==2.16.3
+pylint==2.17.0
     # via
     #   edx-lint
     #   pylint-celery
@@ -214,7 +214,7 @@ typing-extensions==4.5.0
     # via
     #   astroid
     #   pylint
-urllib3==1.26.14
+urllib3==1.26.15
     # via
     #   -r requirements/test.txt
     #   requests
