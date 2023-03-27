@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.15.0
+astroid==2.15.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -116,7 +116,7 @@ fastavro==1.7.3
     # via
     #   -r requirements/quality.txt
     #   openedx-events
-filelock==3.10.0
+filelock==3.10.6
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -173,7 +173,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.12.3
     # via -r requirements/pip-tools.txt
-platformdirs==3.1.1
+platformdirs==3.2.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -202,7 +202,7 @@ pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.14.0
     # via diff-cover
-pylint==2.17.0
+pylint==2.17.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -243,7 +243,7 @@ python-slugify==8.0.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2022.7.1
+pytz==2023.2
     # via
     #   -r requirements/quality.txt
     #   celery
