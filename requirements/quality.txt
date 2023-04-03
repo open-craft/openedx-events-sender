@@ -171,7 +171,7 @@ python-slugify==8.0.1
     # via
     #   -r requirements/test.txt
     #   code-annotations
-pytz==2023.2
+pytz==2023.3
     # via
     #   -r requirements/test.txt
     #   celery
@@ -208,7 +208,7 @@ tomli==2.0.1
     #   coverage
     #   pylint
     #   pytest
-tomlkit==0.11.6
+tomlkit==0.11.7
     # via pylint
 typing-extensions==4.5.0
     # via
