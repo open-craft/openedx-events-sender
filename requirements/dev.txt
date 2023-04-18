@@ -12,12 +12,12 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.15.2
+astroid==2.15.3
     # via
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-attrs==22.2.0
+attrs==23.1.0
     # via
     #   -r requirements/quality.txt
     #   openedx-events
@@ -149,7 +149,7 @@ mccabe==0.7.0
     #   pylint
 openedx-events==7.0.0
     # via -r requirements/quality.txt
-packaging==23.0
+packaging==23.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
@@ -192,7 +192,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.txt
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pygments==2.14.0
+pygments==2.15.0
     # via diff-cover
 pylint==2.17.2
     # via
@@ -222,7 +222,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.3.0
+pytest==7.3.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -258,7 +258,7 @@ snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements/quality.txt
     #   django
