@@ -109,7 +109,7 @@ fastavro==1.7.3
     # via
     #   -r requirements/quality.txt
     #   openedx-events
-filelock==3.11.0
+filelock==3.12.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -192,7 +192,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.txt
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pygments==2.15.0
+pygments==2.15.1
     # via diff-cover
 pylint==2.17.2
     # via
@@ -308,7 +308,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.21.0
+virtualenv==20.22.0
     # via
     #   -r requirements/ci.txt
     #   tox
