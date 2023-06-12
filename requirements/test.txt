@@ -19,12 +19,13 @@ attrs==23.1.0
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
+    #   celery
     #   kombu
-billiard==3.6.4.0
+billiard==4.1.0
     # via
     #   -r requirements/base.txt
     #   celery
-celery==5.2.7
+celery==5.3.0
     # via -r requirements/base.txt
 certifi==2023.5.7
     # via
@@ -103,7 +104,7 @@ pymongo==3.13.0
     # via
     #   -r requirements/base.txt
     #   edx-opaque-keys
-pytest==7.3.1
+pytest==7.3.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -111,12 +112,15 @@ pytest-cov==4.1.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
+python-dateutil==2.8.2
+    # via
+    #   -r requirements/base.txt
+    #   celery
 python-slugify==8.0.1
     # via code-annotations
 pytz==2023.3
     # via
     #   -r requirements/base.txt
-    #   celery
     #   django
 pyyaml==6.0
     # via code-annotations
@@ -126,6 +130,7 @@ six==1.16.0
     # via
     #   -r requirements/base.txt
     #   click-repl
+    #   python-dateutil
 sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
@@ -150,7 +155,8 @@ tzdata==2023.3
     # via
     #   -r requirements/base.txt
     #   backports-zoneinfo
-urllib3==2.0.2
+    #   celery
+urllib3==2.0.3
     # via
     #   -r requirements/base.txt
     #   requests
