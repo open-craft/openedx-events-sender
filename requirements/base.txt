@@ -39,7 +39,7 @@ django==3.2.20
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
     #   openedx-events
-edx-opaque-keys[django]==2.3.0
+edx-opaque-keys[django]==2.4.0
     # via openedx-events
 fastavro==1.8.2
     # via openedx-events
@@ -47,7 +47,7 @@ idna==3.4
     # via requests
 kombu==5.3.1
     # via celery
-openedx-events==8.4.0
+openedx-events==8.5.0
     # via -r requirements/base.in
 pbr==5.11.1
     # via stevedore
