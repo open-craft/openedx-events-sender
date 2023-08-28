@@ -80,7 +80,7 @@ django==3.2.20
     #   openedx-events
 edx-lint==5.3.4
     # via -r requirements/quality.in
-edx-opaque-keys[django]==2.4.0
+edx-opaque-keys[django]==2.5.0
     # via
     #   -r requirements/test.txt
     #   openedx-events
@@ -132,7 +132,7 @@ pbr==5.11.1
     #   stevedore
 platformdirs==3.10.0
     # via pylint
-pluggy==1.2.0
+pluggy==1.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -222,6 +222,7 @@ typing-extensions==4.7.1
     #   -r requirements/test.txt
     #   asgiref
     #   astroid
+    #   edx-opaque-keys
     #   kombu
     #   pylint
 tzdata==2023.3

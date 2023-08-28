@@ -102,7 +102,7 @@ edx-i18n-tools==1.1.0
     # via -r requirements/dev.in
 edx-lint==5.3.4
     # via -r requirements/quality.txt
-edx-opaque-keys[django]==2.4.0
+edx-opaque-keys[django]==2.5.0
     # via
     #   -r requirements/quality.txt
     #   openedx-events
@@ -176,7 +176,7 @@ platformdirs==3.10.0
     #   -r requirements/quality.txt
     #   pylint
     #   virtualenv
-pluggy==1.2.0
+pluggy==1.3.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -307,6 +307,7 @@ typing-extensions==4.7.1
     #   -r requirements/quality.txt
     #   asgiref
     #   astroid
+    #   edx-opaque-keys
     #   kombu
     #   pylint
 tzdata==2023.3
@@ -332,7 +333,7 @@ wcwidth==0.2.6
     # via
     #   -r requirements/quality.txt
     #   prompt-toolkit
-wheel==0.41.1
+wheel==0.41.2
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
