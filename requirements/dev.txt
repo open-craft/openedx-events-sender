@@ -30,11 +30,11 @@ billiard==4.1.0
     # via
     #   -r requirements/quality.txt
     #   celery
-build==0.10.0
+build==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-celery==5.3.1
+celery==5.3.4
     # via -r requirements/quality.txt
 certifi==2023.7.22
     # via
@@ -114,7 +114,7 @@ fastavro==1.8.2
     # via
     #   -r requirements/quality.txt
     #   openedx-events
-filelock==3.12.2
+filelock==3.12.3
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -123,6 +123,10 @@ idna==3.4
     # via
     #   -r requirements/quality.txt
     #   requests
+importlib-metadata==6.8.0
+    # via
+    #   -r requirements/pip-tools.txt
+    #   build
 iniconfig==2.0.0
     # via
     #   -r requirements/quality.txt
@@ -136,7 +140,7 @@ jinja2==3.1.2
     #   -r requirements/quality.txt
     #   code-annotations
     #   diff-cover
-kombu==5.3.1
+kombu==5.3.2
     # via
     #   -r requirements/quality.txt
     #   celery
@@ -152,7 +156,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-openedx-events==8.5.0
+openedx-events==8.6.0
     # via -r requirements/quality.txt
 packaging==23.1
     # via
@@ -227,7 +231,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.4.0
+pytest==7.4.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -304,10 +308,12 @@ tox-battery==0.6.2
     # via -r requirements/ci.txt
 typing-extensions==4.7.1
     # via
+    #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   asgiref
     #   astroid
     #   edx-opaque-keys
+    #   filelock
     #   kombu
     #   pylint
 tzdata==2023.3
@@ -325,7 +331,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.24.3
+virtualenv==20.24.4
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -341,6 +347,10 @@ wrapt==1.15.0
     # via
     #   -r requirements/quality.txt
     #   astroid
+zipp==3.16.2
+    # via
+    #   -r requirements/pip-tools.txt
+    #   importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

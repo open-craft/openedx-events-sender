@@ -25,7 +25,7 @@ billiard==4.1.0
     # via
     #   -r requirements/base.txt
     #   celery
-celery==5.3.1
+celery==5.3.4
     # via -r requirements/base.txt
 certifi==2023.7.22
     # via
@@ -81,7 +81,7 @@ iniconfig==2.0.0
     # via pytest
 jinja2==3.1.2
     # via code-annotations
-kombu==5.3.1
+kombu==5.3.2
     # via
     #   -r requirements/base.txt
     #   celery
@@ -104,7 +104,7 @@ pymongo==3.13.0
     # via
     #   -r requirements/base.txt
     #   edx-opaque-keys
-pytest==7.4.0
+pytest==7.4.1
     # via
     #   pytest-cov
     #   pytest-django
