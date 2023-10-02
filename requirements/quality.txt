@@ -12,7 +12,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.15.7
+astroid==2.15.8
     # via
     #   pylint
     #   pylint-celery
@@ -35,7 +35,7 @@ certifi==2023.7.22
     # via
     #   -r requirements/test.txt
     #   requests
-charset-normalizer==3.2.0
+charset-normalizer==3.3.0
     # via
     #   -r requirements/test.txt
     #   requests
@@ -122,7 +122,7 @@ mccabe==0.7.0
     # via pylint
 openedx-events==8.6.0
     # via -r requirements/test.txt
-packaging==23.1
+packaging==23.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -144,7 +144,7 @@ pycodestyle==2.11.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==2.17.5
+pylint==2.17.7
     # via
     #   edx-lint
     #   pylint-celery
@@ -240,7 +240,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.6
+wcwidth==0.2.8
     # via
     #   -r requirements/test.txt
     #   prompt-toolkit
