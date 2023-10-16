@@ -24,6 +24,7 @@ attrs==23.1.0
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/quality.txt
+    #   backports-zoneinfo
     #   celery
     #   kombu
 billiard==4.1.0
@@ -81,8 +82,9 @@ code-annotations==1.5.0
 coverage[toml]==7.3.2
     # via
     #   -r requirements/quality.txt
+    #   coverage
     #   pytest-cov
-diff-cover==7.7.0
+diff-cover==8.0.0
     # via -r requirements/dev.in
 dill==0.3.7
     # via
@@ -105,6 +107,7 @@ edx-lint==5.3.4
 edx-opaque-keys[django]==2.5.1
     # via
     #   -r requirements/quality.txt
+    #   edx-opaque-keys
     #   openedx-events
 exceptiongroup==1.1.3
     # via
@@ -199,7 +202,7 @@ py==1.11.0
     # via
     #   -r requirements/ci.txt
     #   tox
-pycodestyle==2.11.0
+pycodestyle==2.11.1
     # via -r requirements/quality.txt
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
