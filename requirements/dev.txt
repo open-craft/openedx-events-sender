@@ -102,7 +102,7 @@ django==3.2.22
     #   openedx-events
 edx-i18n-tools==1.3.0
     # via -r requirements/dev.in
-edx-lint==5.3.4
+edx-lint==5.3.6
     # via -r requirements/quality.txt
 edx-opaque-keys[django]==2.5.1
     # via
@@ -113,11 +113,11 @@ exceptiongroup==1.1.3
     # via
     #   -r requirements/quality.txt
     #   pytest
-fastavro==1.8.4
+fastavro==1.9.0
     # via
     #   -r requirements/quality.txt
     #   openedx-events
-filelock==3.12.4
+filelock==3.13.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -215,7 +215,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.5.4
+pylint-django==2.5.5
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -232,7 +232,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.4.2
+pytest==7.4.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -330,7 +330,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.24.5
+virtualenv==20.24.6
     # via
     #   -r requirements/ci.txt
     #   tox
