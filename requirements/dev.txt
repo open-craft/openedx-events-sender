@@ -43,7 +43,7 @@ certifi==2023.7.22
     #   requests
 chardet==5.2.0
     # via diff-cover
-charset-normalizer==3.3.1
+charset-normalizer==3.3.2
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -94,7 +94,7 @@ distlib==0.3.7
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.22
+django==3.2.23
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -102,7 +102,7 @@ django==3.2.22
     #   openedx-events
 edx-i18n-tools==1.3.0
     # via -r requirements/dev.in
-edx-lint==5.3.4
+edx-lint==5.3.6
     # via -r requirements/quality.txt
 edx-opaque-keys[django]==2.5.1
     # via
@@ -113,11 +113,11 @@ exceptiongroup==1.1.3
     # via
     #   -r requirements/quality.txt
     #   pytest
-fastavro==1.8.4
+fastavro==1.9.0
     # via
     #   -r requirements/quality.txt
     #   openedx-events
-filelock==3.12.4
+filelock==3.13.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -157,7 +157,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-openedx-events==9.0.0
+openedx-events==9.0.1
     # via -r requirements/quality.txt
 packaging==23.2
     # via
@@ -215,7 +215,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.5.4
+pylint-django==2.5.5
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -232,14 +232,14 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.4.2
+pytest==7.4.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
     #   pytest-django
 pytest-cov==4.1.0
     # via -r requirements/quality.txt
-pytest-django==4.5.2
+pytest-django==4.6.0
     # via -r requirements/quality.txt
 python-dateutil==2.8.2
     # via
@@ -296,7 +296,7 @@ tomli==2.0.1
     #   pyproject-hooks
     #   pytest
     #   tox
-tomlkit==0.12.1
+tomlkit==0.12.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -324,21 +324,21 @@ urllib3==2.0.7
     # via
     #   -r requirements/quality.txt
     #   requests
-vine==5.0.0
+vine==5.1.0
     # via
     #   -r requirements/quality.txt
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.24.5
+virtualenv==20.24.6
     # via
     #   -r requirements/ci.txt
     #   tox
-wcwidth==0.2.8
+wcwidth==0.2.9
     # via
     #   -r requirements/quality.txt
     #   prompt-toolkit
-wheel==0.41.2
+wheel==0.41.3
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
