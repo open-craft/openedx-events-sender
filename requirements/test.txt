@@ -73,7 +73,7 @@ edx-opaque-keys[django]==2.5.1
     #   openedx-events
 exceptiongroup==1.2.0
     # via pytest
-fastavro==1.9.0
+fastavro==1.9.1
     # via
     #   -r requirements/base.txt
     #   openedx-events
@@ -149,7 +149,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via
     #   -r requirements/base.txt
     #   asgiref
