@@ -41,7 +41,7 @@ django==3.2.23
     #   openedx-events
 edx-opaque-keys[django]==2.5.1
     # via openedx-events
-fastavro==1.9.1
+fastavro==1.9.2
     # via openedx-events
 idna==3.6
     # via requests

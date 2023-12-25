@@ -79,7 +79,7 @@ code-annotations==1.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-coverage[toml]==7.3.3
+coverage[toml]==7.3.4
     # via
     #   -r requirements/quality.txt
     #   coverage
@@ -113,7 +113,7 @@ exceptiongroup==1.2.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-fastavro==1.9.1
+fastavro==1.9.2
     # via
     #   -r requirements/quality.txt
     #   openedx-events
@@ -126,7 +126,7 @@ idna==3.6
     # via
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==7.0.0
+importlib-metadata==7.0.1
     # via
     #   -r requirements/pip-tools.txt
     #   build
@@ -147,7 +147,7 @@ kombu==5.3.4
     # via
     #   -r requirements/quality.txt
     #   celery
-lxml==4.9.3
+lxml==4.9.4
     # via edx-i18n-tools
 markupsafe==2.1.3
     # via
