@@ -41,11 +41,11 @@ django==3.2.23
     #   openedx-events
 edx-opaque-keys[django]==2.5.1
     # via openedx-events
-fastavro==1.9.2
+fastavro==1.9.3
     # via openedx-events
 idna==3.6
     # via requests
-kombu==5.3.4
+kombu==5.3.5
     # via celery
 openedx-events==9.2.0
     # via -r requirements/base.in
@@ -83,5 +83,5 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.12
+wcwidth==0.2.13
     # via prompt-toolkit
