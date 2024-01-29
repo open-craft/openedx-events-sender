@@ -47,7 +47,7 @@ idna==3.6
     # via requests
 kombu==5.3.5
     # via celery
-openedx-events==9.2.0
+openedx-events==9.3.0
     # via -r requirements/base.in
 pbr==6.0.0
     # via stevedore
