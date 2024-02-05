@@ -18,7 +18,7 @@ billiard==4.2.0
     # via celery
 celery==5.3.6
     # via -r requirements/base.in
-certifi==2023.11.17
+certifi==2024.2.2
     # via requests
 charset-normalizer==3.3.2
     # via requests
@@ -47,7 +47,7 @@ idna==3.6
     # via requests
 kombu==5.3.5
     # via celery
-openedx-events==9.3.0
+openedx-events==9.4.0
     # via -r requirements/base.in
 pbr==6.0.0
     # via stevedore
@@ -57,7 +57,7 @@ pymongo==3.13.0
     # via edx-opaque-keys
 python-dateutil==2.8.2
     # via celery
-pytz==2023.3.post1
+pytz==2024.1
     # via django
 requests==2.31.0
     # via -r requirements/base.in
@@ -76,7 +76,7 @@ tzdata==2023.4
     # via
     #   backports-zoneinfo
     #   celery
-urllib3==2.1.0
+urllib3==2.2.0
     # via requests
 vine==5.1.0
     # via
