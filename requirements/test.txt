@@ -32,6 +32,10 @@ certifi==2024.2.2
     # via
     #   -r requirements/base.txt
     #   requests
+cffi==1.16.0
+    # via
+    #   -r requirements/base.txt
+    #   pynacl
 charset-normalizer==3.3.2
     # via
     #   -r requirements/base.txt
@@ -44,6 +48,7 @@ click==8.1.7
     #   click-plugins
     #   click-repl
     #   code-annotations
+    #   edx-django-utils
 click-didyoumean==0.3.0
     # via
     #   -r requirements/base.txt
@@ -64,6 +69,21 @@ coverage[toml]==7.4.1
     #   pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -r requirements/base.txt
+    #   django-crum
+    #   django-waffle
+    #   edx-django-utils
+    #   openedx-events
+django-crum==0.7.9
+    # via
+    #   -r requirements/base.txt
+    #   edx-django-utils
+django-waffle==4.1.0
+    # via
+    #   -r requirements/base.txt
+    #   edx-django-utils
+edx-django-utils==5.10.1
+    # via
     #   -r requirements/base.txt
     #   openedx-events
 edx-opaque-keys[django]==2.5.1
@@ -91,6 +111,10 @@ kombu==5.3.5
     #   celery
 markupsafe==2.1.5
     # via jinja2
+newrelic==9.6.0
+    # via
+    #   -r requirements/base.txt
+    #   edx-django-utils
     # via -r requirements/base.txt
 packaging==23.2
     # via pytest
@@ -104,10 +128,22 @@ prompt-toolkit==3.0.43
     # via
     #   -r requirements/base.txt
     #   click-repl
+psutil==5.9.8
+    # via
+    #   -r requirements/base.txt
+    #   edx-django-utils
+pycparser==2.21
+    # via
+    #   -r requirements/base.txt
+    #   cffi
 pymongo==3.13.0
     # via
     #   -r requirements/base.txt
     #   edx-opaque-keys
+pynacl==1.5.0
+    # via
+    #   -r requirements/base.txt
+    #   edx-django-utils
 pytest==8.0.0
     # via
     #   pytest-cov
@@ -120,7 +156,7 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/base.txt
     #   celery
-python-slugify==8.0.3
+python-slugify==8.0.4
     # via code-annotations
 pytz==2024.1
     # via
@@ -142,6 +178,7 @@ stevedore==5.1.0
     # via
     #   -r requirements/base.txt
     #   code-annotations
+    #   edx-django-utils
     #   edx-opaque-keys
 text-unidecode==1.3
     # via python-slugify
@@ -155,7 +192,7 @@ typing-extensions==4.9.0
     #   asgiref
     #   edx-opaque-keys
     #   kombu
-tzdata==2023.4
+tzdata==2024.1
     # via
     #   -r requirements/base.txt
     #   backports-zoneinfo
