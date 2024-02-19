@@ -19,7 +19,6 @@ attrs==23.2.0
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
-    #   backports-zoneinfo
     #   celery
     #   kombu
 billiard==4.2.0
@@ -64,9 +63,7 @@ click-repl==0.3.0
 code-annotations==1.6.0
     # via -r requirements/test.in
 coverage[toml]==7.4.1
-    # via
-    #   coverage
-    #   pytest-cov
+    # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -89,11 +86,10 @@ edx-django-utils==5.10.1
 edx-opaque-keys[django]==2.5.1
     # via
     #   -r requirements/base.txt
-    #   edx-opaque-keys
     #   openedx-events
 exceptiongroup==1.2.0
     # via pytest
-fastavro==1.9.3
+fastavro==1.9.4
     # via
     #   -r requirements/base.txt
     #   openedx-events
@@ -144,7 +140,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==8.0.0
+pytest==8.0.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -197,7 +193,7 @@ tzdata==2024.1
     #   -r requirements/base.txt
     #   backports-zoneinfo
     #   celery
-urllib3==2.2.0
+urllib3==2.2.1
     # via
     #   -r requirements/base.txt
     #   requests
