@@ -24,7 +24,6 @@ attrs==23.2.0
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/quality.txt
-    #   backports-zoneinfo
     #   celery
     #   kombu
 billiard==4.2.0
@@ -87,7 +86,6 @@ code-annotations==1.6.0
 coverage[toml]==7.4.1
     # via
     #   -r requirements/quality.txt
-    #   coverage
     #   pytest-cov
 diff-cover==8.0.3
     # via -r requirements/dev.in
@@ -127,13 +125,12 @@ edx-lint==5.3.6
 edx-opaque-keys[django]==2.5.1
     # via
     #   -r requirements/quality.txt
-    #   edx-opaque-keys
     #   openedx-events
 exceptiongroup==1.2.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-fastavro==1.9.3
+fastavro==1.9.4
     # via
     #   -r requirements/quality.txt
     #   openedx-events
@@ -181,7 +178,7 @@ newrelic==9.6.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-openedx-events==9.5.0
+openedx-events==9.5.1
     # via -r requirements/quality.txt
 packaging==23.2
     # via
@@ -197,7 +194,7 @@ pbr==6.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==7.3.0
+pip-tools==7.4.0
     # via -r requirements/pip-tools.txt
 platformdirs==4.2.0
     # via
@@ -268,7 +265,8 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==8.0.0
+    #   pip-tools
+pytest==8.0.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -356,7 +354,7 @@ tzdata==2024.1
     #   -r requirements/quality.txt
     #   backports-zoneinfo
     #   celery
-urllib3==2.2.0
+urllib3==2.2.1
     # via
     #   -r requirements/quality.txt
     #   requests
