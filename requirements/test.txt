@@ -62,7 +62,7 @@ click-repl==0.3.0
     #   celery
 code-annotations==1.6.0
     # via -r requirements/test.in
-coverage[toml]==7.4.1
+coverage[toml]==7.4.3
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -107,7 +107,7 @@ kombu==5.3.5
     #   celery
 markupsafe==2.1.5
     # via jinja2
-newrelic==9.6.0
+newrelic==9.7.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -140,7 +140,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -170,7 +170,7 @@ sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.1.0
+stevedore==5.2.0
     # via
     #   -r requirements/base.txt
     #   code-annotations
@@ -182,7 +182,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/base.txt
     #   asgiref
