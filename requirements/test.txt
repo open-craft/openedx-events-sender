@@ -20,6 +20,7 @@ backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
     #   celery
+    #   django
     #   kombu
 billiard==4.2.0
     # via
@@ -140,7 +141,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==8.0.2
+pytest==8.1.0
     # via
     #   pytest-cov
     #   pytest-django
@@ -148,16 +149,12 @@ pytest-cov==4.1.0
     # via -r requirements/test.in
 pytest-django==4.8.0
     # via -r requirements/test.in
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   -r requirements/base.txt
     #   celery
 python-slugify==8.0.4
     # via code-annotations
-pytz==2024.1
-    # via
-    #   -r requirements/base.txt
-    #   django
 pyyaml==6.0.1
     # via code-annotations
 requests==2.31.0
